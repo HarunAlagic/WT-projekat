@@ -1,0 +1,32 @@
+body{
+    /*background-color: #FFCCCC;*/
+    background-color: #fdf1d3;
+}
+
+#slikica{
+    height: 100px;
+    /*ova margina je dodana jer me nerviralo da nije tacno poravnat rub slike sa vrhom input field-a*/
+    margin-top: 13px;
+}
+
+@media screen and (max-width: 499px) {
+    #tabela td{
+        max-width: 380px;
+        min-width: 150px;
+    }
+}
+
+
+@media screen and (min-width: 500px) {
+    #tabela{
+        display:flex;
+        /*row je defaultni smjer ravnanja flexa*/
+        /*flex-direction: row;*/
+        column-gap: 20px;
+    }
+    #tabela td{
+        min-width: 150px;
+        max-width: 150px;
+    }
+    
+}

@@ -1,0 +1,27 @@
+body{
+    /*background-color: #FFCCCC;*/
+    background-color: #fdf1d3;
+}
+#meni ul {
+    display: table;
+    margin: 0 auto;
+}
+
+a:hover{
+    color: #ff9900;
+}
+#meni{
+    position: fixed;
+    position: sticky;
+    top: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #fdf1d3;
+}
+#meni li {
+    display: inline;
+    margin: 10px;
+}
+a{
+    text-decoration-line: none;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<HTML>
+    <header><link rel="header" href="meni.html"></header>
+<HEAD>
+<TITLE>Meni</TITLE>
+<link rel="stylesheet" type="text/css" href="../css/meni.css">
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+</HEAD>
+    <BODY>
+        <div id="meni">
+            <ul style="position: sticky;">
+                <li><a id="profil" href="profil.html" target="_parent">Profil</a></li>
+                <li><a id="nekretnine" href="nekretnine.html" target="_parent">Nekretnine</a></li>
+                <li><a id="prijava" href="prijava.html" target="_parent">Prijava</a></li>
+                <li><button id="odjava" onclick="odjava()">Odjava</button></li>
+            </ul>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="../scripts/PoziviAjax.js"></script>
+        <SCRIPT src="../scripts/prijava.js"></SCRIPT>
+        <script>
+            PoziviAjax.getKorisnik((err, response) => {
+                if(err)
+                    console.log(err)
+                else if(response.username !== null)  {
+                    document.getElementById("prijava").style="visibility:hidden"
+                    document.getElementById("profil").style = "visibility:visible"
+                    document.getElementById("odjava").style.visibility = "visible"
+                    return;
+                } else{
+                    
+                    console.log(response)
+                    
+                }
+                document.getElementById("prijava").style ="visibility:visible"
+                document.getElementById("profil").style = "visibility:hidden"
+                document.getElementById("odjava").style = "display:none";
+                document.getElementById("odjava").style = "visibility:hidden";
+                document.getElementById("odjava").style.visibility ="hidden";
+                document.getElementById("odjava").style.display = "none";
+            })
+        </script>
+        <script>
+            function odjava(){
+                PoziviAjax.postLogout((err, response) => {
+                    if(err){
+                        console.log(err);
+                    }else{
+                        console.log(response);
+                    }
+                    location.href = "http://localhost:3000/nekretnine.html"
+                    location.replace("http://localhost:3000/nekretnine.html");
+                });
+            }
+        </script>
+    </BODY>
+</HTML>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<HTML lang="eng">
+    <HEAD>
+        <TITLE>Detalji</TITLE>
+        <link rel="stylesheet" type="text/css" href="../css/detalji.css">
+        <link rel="stylesheet" type="text/css" href="../css/iframe.css">
+        <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <SCRIPT src="../scripts/PoziviAjax.js"></SCRIPT>
+        <SCRIPT src="../scripts/spojiDetalje.js"></SCRIPT>
+        <SCRIPT src="../scripts/detalji.js"></SCRIPT>
+        <SCRIPT src="../scripts/spojiUpite.js"></SCRIPT>
+    </HEAD>
+    <BODY onload="popuniDetalje()">
+        
+        <iframe src="meni.html" title="Meni" scrolling="no"></iframe>
+        <h3>OSNOVNO</h3>
+        <div id="osnovno">
+            
+            <img id="osnovna_slika" src="../Slika_nekretnine_front.jpeg" style="width:100%; height:300px;">
+            <p id="osnovni_naziv"><strong>Naziv: </strong>50 m2</p>
+            <br>
+            <p id="osnovna_kvadratura"><strong>Kvadratura: </strong>50m2</p>
+            <br>
+            <p id="osnovna_cijena"><strong>Cijena: </strong>232000 KM</p>
+            <br>
+            
+        </div>
+        <h3>DETALJI</h3>
+        <div id="detalji">
+            <table>
+                <tr>
+                    <td width="50%"><p id="detalji_grijanje"><strong>Tip grijanja: </strong>plin</p></td>
+                    <td width="50%"><p id="detalji_godina_izgradnje"><strong>Godina izgradnje: </strong>2019</p></td>
+                </tr>
+                <tr>
+                    <td width="50%"><p id="detalji_lokacija"><strong>Lokacija: </strong>Novo Sarajevo</p></td>
+                    <td width="50%"><p id="detalji_datum_objave"><strong>Datum objave: </strong>01.10.2023.</p></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><p id="detalji_opis"><strong>Opis: </strong>Neki tekst koji bi trebalo da zauzima nekoliko redova
+                    da budemo tacniji potrebno je da zauzima cetiri reda, arapski 4, rimski IV, pored ovoga potrebno je 
+                    da ima i neku relativno finu sirinu.Neki drugi tekst koji bi trebalo da zauzima nekoliko redova
+                    da budemo tacniji potrebno je da zauzima cetiri reda, arapski 4, rimski IV, pored ovoga potrebno je 
+                    da ima i neku relativno finu sirinu.Neki treci tekst koji bi trebalo da zauzima nekoliko redova
+                    da budemo tacniji potrebno je da zauzima cetiri reda, arapski 4, rimski IV, pored ovoga potrebno je 
+                    da ima i neku relativno finu sirinu.</p></td>
+                </tr>
+            </table>
+        </div>
+        <h3>UPITI</h3>
+        <div id="upiti">
+            <ul id="upiti_lista">
+                
+            </ul>
+        </div>
+        <div id="dodatni">
+            
+            <form onsubmit="event.preventDefault(); posaljiUpit();">
+                <tr>
+                    <td  colspan="2"><label for="upit"><strong>Tekst upita: </strong></label></td>
+                    <td  colspan="1"><input type="text" id="upit" placeholder="upit"></td>
+                    <td colspan="2"><input type="submit" value="Posalji upit" style="height: 30px;"></td>
+                </tr>
+            </form>
+        </div>
+        
+        <script>
+            PoziviAjax.getKorisnik((err, response) => {
+                if(err)
+                    console.log(err)
+                else if(response.username !== null)  {
+                    document.getElementById("dodatni").style ="visibility:visible"
+                    return;
+                } else{
+                    
+                    console.log(response)
+                    
+                }
+                document.getElementById("dodatni").style ="visibility:hidden"
+            })
+            document.getElementById("dodatni").style ="visibility:visible"
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const id = urlParams.get('id')
+            console.log(id);
+        </script>
+        
+    </BODY>
+</HTML>

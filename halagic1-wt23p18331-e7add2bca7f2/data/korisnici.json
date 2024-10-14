@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "ime": "Neko",
+        "prezime": "Nekic",
+        "username": "username1",
+        "password": "$2b$10$YuGRE8alEywiPPmhc8OjcueJJpUURS8us9wNAGHFb7n2YtC31ta9q"
+    },
+    {
+        "id": 2,
+        "ime": "Neko2",
+        "prezime": "Nekic2",
+        "username": "username2",
+        "password": "$2b$10$5ctjxp0/UMO62a7QgvwkSOFHMx8XQKorNTVz5ggZqG0lA9x1gyOxC"
+    }
+]

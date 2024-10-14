@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<HTML lang="eng">
+<HEAD>
+<TITLE>Prijava</TITLE>
+<link rel="stylesheet" type="text/css" href="../css/prijava.css">
+<link rel="stylesheet" type="text/css" href="../css/iframe.css">
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+</HEAD>
+    <BODY>
+        
+        
+        <iframe src="meni.html" title="Meni" width="100%" scrolling="no"></iframe>
+        <div id="tabela">
+            <table>
+                <!---->
+                <form onsubmit="event.preventDefault(); prijava();">
+                <tr>
+                    <td  colspan="2"><label for="username">Username</label></td>
+                    <td  colspan="1"><input type="text" id="username" placeholder="username"></td>
+                </tr>
+                <tr>
+                    <td  colspan="2"><label for="password">Password</label></td>
+                    <td  colspan="1"><input type="password" id="password" placeholder="password"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td colspan="2"><input type="submit" value="Prijava"></td>
+                </tr>
+                
+                </form>
+            </table>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="../scripts/PoziviAjax.js"></script>
+        <SCRIPT src="../scripts/prijava.js"></SCRIPT>
+    </BODY>
+</HTML>

@@ -1,0 +1,51 @@
+body{
+    /*background-color: #FFCCCC;*/
+    background-color: #fdf1d3;
+}
+#naziv{
+    text-align: left;
+    width: 300px;
+}
+#kvadratura{
+    text-align: left;
+    width: 300px;
+}
+#cijena{
+    text-align: right;
+    width: 300px;
+}
+#dugme{
+    text-align: center;
+    width: 300px;
+}
+#lokacija{
+    text-align: left;
+    width: 300px;
+}
+#godina_izgradnje{
+    text-align: left;
+    width: 300px;
+}
+#dugme_2{
+    text-align: right;
+    width: 300px;
+}
+img{
+    width: 100%;
+    height: 150px;
+}
+
+.stan{
+    background-color: white;
+}
+.kuca{
+    background-color: powderblue;
+}
+.poslovniProstor{
+    background-color: green;
+}
+.nekretnine{
+    display:grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, 300px);
+}

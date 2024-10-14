@@ -1,0 +1,31 @@
+body{
+    /*background-color: #FFCCCC;*/
+    background-color: #fdf1d3;
+    min-width: 414px;
+}
+
+input[type=text] {
+    width: 90%;
+    min-width: 170px;
+    height: 30px;
+}
+input[type=password]{
+    width: 90%;
+    min-width: 170px;
+    height: 30px;
+}
+
+#tabela tr{
+    height: 60px;
+}
+#tabela td{
+    max-width: 380px;
+    min-width: 150px;
+
+}
+
+#prijavno{
+    width: 90%;
+    min-width: 178px;
+    height: 30px;
+}
